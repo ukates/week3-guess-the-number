@@ -1,4 +1,4 @@
-# solution created by Prof. Alfaro
+# replace the contents of this comment with your name
 import random
 
 # -------------------------------------------------------------------
