@@ -58,8 +58,6 @@ def evaluateAnswer( userGuess, userSecretNumber ):
     elif userGuess == userSecretNumber:
         return True
     
-
-
     
     # TO DO: ####################################################
     # Write code in this function that compares userGuess and   #
@@ -99,20 +97,8 @@ def playGame( showAnswer ):
 
     userGuess = int(input())
     theNumber = generateNumber(ul)
-    showAnswer = evaluateAnswer()
-    askUserToGuess = (int(input()), totalGuesses)
 
-
-playGame('')
-
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
     # TO DO: ####################################################
     # Write code in this function that                          #
@@ -145,3 +131,4 @@ if askUserToGuess(totalGuesses,theNumber) == True:
 else:
         print('Nope. The number I was thinking of was ' + str(theNumber))
 # end of playGame function -----------------------------------------
+
