@@ -48,14 +48,14 @@ def askUserToGuess( times, secretNumber ):
 # it has two parameters:
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
-def evaluateAnswer( userGuess, userSecretNumber ):
+def evaluateAnswer( userGuess, userSecretNumber ):  #when this function is called, it takes the input of the user and compares it to the secret number which is defined in the generateNumber function. 
     if userGuess < userSecretNumber:
-        print('Your guess is too low, try again!')
+        print('Your guess is too low, try again!')  #user guess is too low, will return false and start over.
         return False
     elif userGuess > userSecretNumber:
-        print('Your guess is too high, try again!')
+        print('Your guess is too high, try again!') #user guess is too high, will return false and start over.
         return False
-    elif userGuess == userSecretNumber:
+    elif userGuess == userSecretNumber:  #user guess is equal to the secretNumber which is the randomly generated number (n) the statement will be True and will take the user out of the askUserToGuess loop. 
         return True
     
     
@@ -80,22 +80,22 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #       True, we'll show the right answer on the screen
 #       False, we won't show the right answer on the screen
 def playGame( showAnswer ):
-    print('Welcome to the best number guessing game you will ever play!')
+    print('Welcome to the best number guessing game you will ever play!')  #this is the text for the game. 
     print()
     print('What is the largest number that you would like to guess?')
     print('Please integers only:')
 
-    ul = int(input())
+    ul = int(input())  #this is the upper limit chosen by the user when asked what the largest number they would like to guess is. 
 
     print('How many times would you like to make a guess?')
     print('I feel like I should not have to say this twice, but please only integers:')
 
-    totalGuesses = int(input())
+    totalGuesses = int(input()) # this is the total number of guesses based on the users input 
 
     print('I am thinking of a number between 1 and ' + str(ul))
     print('You have ' + str(totalGuesses) + ' tries to guess it!')
-    userGuess = int(input())
-    theNumber = generateNumber(ul)
+    userGuess = int(input()) 
+    theNumber = generateNumber(ul) #this runs the generateNumber function to create a random number and then values it as theNumber which is used in the if statements below. 
 
   
     
