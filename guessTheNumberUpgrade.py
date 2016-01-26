@@ -7,7 +7,7 @@ import random
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
 def generateNumber( topLimit ):
-    n = random.randint(1, topLimit)  #the random function has 2 arguments 1 and topLimit which is defined later in the program. The function generates a random number between the two arguments and saves it as the variable (r). 
+    n = random.randint(1, topLimit)  #the random function has 2 arguments 1 and topLimit which is defined later in the program. The function generates a random number between the two arguments and saves it as the variable (n). 
     
     return n #when this function is called with a topLimit it will return the random number based on the users top limit
 
