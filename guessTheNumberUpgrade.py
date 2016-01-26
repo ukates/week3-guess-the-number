@@ -94,7 +94,6 @@ def playGame( showAnswer ):
 
     print('I am thinking of a number between 1 and ' + str(ul))
     print('You have ' + str(totalGuesses) + ' tries to guess it!')
-
     userGuess = int(input())
     theNumber = generateNumber(ul)
 
@@ -122,13 +121,13 @@ def playGame( showAnswer ):
     # you don't need to change anything below this comment ##############
     # ///////////////////////////////////////////////////////////////////
     # this if statement allows us to show the hidden number to the user
-if( showAnswer == True ):
+    if( showAnswer == True ):
         print('--shhh, the real number is ' + str(theNumber) + '.')
     
     #this gives a sucess/fail message if the user guessed correctly in the allotted attempts
-if askUserToGuess(totalGuesses,theNumber) == True:
+    if askUserToGuess(totalGuesses,theNumber) == True:
         print('Good job! You guessed my number!')
-else:
+    else:
         print('Nope. The number I was thinking of was ' + str(theNumber))
 # end of playGame function -----------------------------------------
 
