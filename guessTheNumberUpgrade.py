@@ -1,5 +1,5 @@
-# replace the contents of this comment with your name
-import random
+# Derrick Cates
+import random 
 
 # -------------------------------------------------------------------
 # this is the generateNumber function
@@ -7,6 +7,11 @@ import random
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
 def generateNumber( topLimit ):
+    n = random.randint(1, topLimit)  #the random function has 2 arguments 1 and topLimit which is defined later in the program. The function generates a random number between the two arguments and saves it as the variable (r). 
+    
+    return n #when this function is called with a topLimit it will return the random number based on the users top limit
+
+
     
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
@@ -44,6 +49,17 @@ def askUserToGuess( times, secretNumber ):
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
 def evaluateAnswer( userGuess, userSecretNumber ):
+    if userGuess < userSecretNumber:
+        print('Your guess is too low, try again!')
+        return False
+    elif userGuess > userSecretNumber:
+        print('Your guess is too high, try again!')
+        return False
+    elif userGuess == userSecretNumber:
+        return True
+    
+
+
     
     # TO DO: ####################################################
     # Write code in this function that compares userGuess and   #
@@ -66,6 +82,37 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #       True, we'll show the right answer on the screen
 #       False, we won't show the right answer on the screen
 def playGame( showAnswer ):
+    print('Welcome to the best number guessing game you will ever play!')
+    print()
+    print('What is the largest number that you would like to guess?')
+    print('Please integers only:')
+
+    ul = int(input())
+
+    print('How many times would you like to make a guess?')
+    print('I feel like I should not have to say this twice, but please only integers:')
+
+    totalGuesses = int(input())
+
+    print('I am thinking of a number between 1 and ' + str(ul))
+    print('You have ' + str(totalGuesses) + ' tries to guess it!')
+
+    userGuess = int(input())
+    theNumber = generateNumber(ul)
+    showAnswer = evaluateAnswer()
+    askUserToGuess = (int(input()), totalGuesses)
+
+
+playGame('')
+
+    
+    
+    
+    
+    
+    
+    
+    
     
     # TO DO: ####################################################
     # Write code in this function that                          #
@@ -89,12 +136,12 @@ def playGame( showAnswer ):
     # you don't need to change anything below this comment ##############
     # ///////////////////////////////////////////////////////////////////
     # this if statement allows us to show the hidden number to the user
-    if( showAnswer == True ):
+if( showAnswer == True ):
         print('--shhh, the real number is ' + str(theNumber) + '.')
     
     #this gives a sucess/fail message if the user guessed correctly in the allotted attempts
-    if askUserToGuess(totalGuesses,theNumber) == True:
+if askUserToGuess(totalGuesses,theNumber) == True:
         print('Good job! You guessed my number!')
-    else:
+else:
         print('Nope. The number I was thinking of was ' + str(theNumber))
 # end of playGame function -----------------------------------------
